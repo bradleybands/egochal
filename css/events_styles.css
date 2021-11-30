@@ -3,11 +3,12 @@
  body {
 	 font-family: "Baloo 2", cursive;
 	 font-size: 16px;
+	 color: #fff;
 	 text-rendering: optimizeLegibility;
 	 font-weight: initial;
 }
  .dark {
-	 background: black;
+	 background: #black;
 }
  .light {
 	 background: #f3f5f7;
@@ -32,7 +33,6 @@
 	 overflow: hidden;
 	 position: relative;
 	 color: #fff;
-   height: 100px;
 }
  .postcard.dark {
 	 background-color: #18151f;
@@ -58,8 +58,8 @@
 	 font-size: 1.75rem;
 }
  .postcard .postcard__img {
-	 max-height: 100px;
-	 width: 100px;
+	 max-height: 180px;
+	 width: 100%;
 	 object-fit: cover;
 	 position: relative;
 }
@@ -133,7 +133,7 @@
 	}
 	 .postcard .postcard__img {
 		 max-width: 300px;
-		 max-height: 50px;
+		 max-height: 100%;
 		 transition: transform 0.3s ease;
 	}
 	 .postcard .postcard__text {
