@@ -109,7 +109,7 @@
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-7">
 					<div class="card p-3 py-4">
-						<div class="text-center"> <img src="../egochal/images/team_images/<?php echo $team_logo; ?>" width="200" class="rounded-circle"> </div>
+						<div class="text-center"> <img src="images/team_images/<?php echo $team_logo; ?>" width="200" class="rounded-circle"> </div>
 						<div class="text-center  mt-3"> <span class="btn btn-success status-btn p-1 px-4 rounded text-white">Verified</span>
 							<h5 class="mt-2 mb-0"><?php echo "$team_name"; ?></h5>
 							<span>Region: <?php echo "$region"; ?></span>

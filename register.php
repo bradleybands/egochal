@@ -268,8 +268,10 @@
         $game = $_POST['game'];
         $password = $_POST['password'];
         $cpassword = $_POST['cpassword'];
-        //$imagename = $_FILES['simg'] ['name'];
-        //$tempname = $_FILES['simg'] ['tmp_name'];
+        $team_logo = $_FILES['simg'] ['name'];
+        $tempname = $_FILES['simg'] ['tmp_name'];
+
+        move_uploaded_file($tempname, "images\team_images$team_logo");
 
 
         if ($password != $cpassword)
@@ -295,8 +297,8 @@
           die();
         }
 
-        $sql_5 = "INSERT INTO `team`(`team_name`, `region`, `team_email`,`est_date`, `password`, `cpassword`)
-        VALUES ('$team_name', '$region', '$email','$date', '$password', '$cpassword')";
+        $sql_5 = "INSERT INTO `team`(`team_name`, `region`, `team_email`,`est_date`, `password`, `cpassword`,`team_logo`)
+        VALUES ('$team_name', '$region', '$email','$date', '$password', '$cpassword','$team_logo' )";
         $run_5 = mysqli_query($conn, $sql_5);
 
 
