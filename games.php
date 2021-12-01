@@ -108,32 +108,8 @@
 }
 
 
-
  ?>
-					<!-- <div class="col-md-4">
-            <hr>
-            <div class="profile-card-2"><img src="images\game_images\fifa22.jpg" class="img img-responsive">
 
-            </div>
-          </div>
-          <div class="col-md-4">
-            <hr>
-            <div class="profile-card-2"><img src="images\game_images\fortnite.jpg" class="img img-responsive">
-
-            </div>
-          </div>
-          <div class="col-md-4">
-            <hr>
-            <div class="profile-card-2"><img src="images\game_images\warzone.jpg" class="img img-responsive">
-
-            </div>
-          </div>
-          <div class="col-md-4">
-            <hr>
-            <div class="profile-card-2"><img src="images\game_images\lol.jpg" class="img img-responsive">
-
-            </div>
-          </div> -->
 				</div>
 			</div>
 
