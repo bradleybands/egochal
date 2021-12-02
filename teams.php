@@ -86,7 +86,10 @@
   <div class="container text-center mt-5 mb-2" style="margin-bottom:-15%;">
     <?php
 
-     $query = "SELECT * FROM game_team";
+     $query = "SELECT game_team.team_name, game_team.game_title, team.team_logo
+		 FROM game_team
+		 INNER JOIN team ON game_team.team_name = team.team_name ";
+
      $run = mysqli_query($conn, $query);
 
      if(mysqli_num_rows($run) < 1)
@@ -102,8 +105,9 @@
 					$qty++;
           $team_name = $data['team_name'];
           $game_title = $data['game_title'];
+					$team_logo = $data['team_logo'];
 					?>
-
+			<div class="text-center"> <img src="images/team_images/<?php echo $team_logo; ?>" width="100" height="100" class="rounded-circle"> </div>
       <h1 class="mb-0"><?php echo $team_name ?></h1><span ><?php echo $game_title  ?></span>
   </div>
 

@@ -1,5 +1,6 @@
 <?php
 	session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,6 +28,8 @@
 </head>
 
 <body>
+
+
 	<section class="colored-section" id="title">
 
 		<div class="container-fluid" id="gen-nav" style="padding-bottom: 0">
@@ -83,10 +86,12 @@
 						</div>
 						<div class="row mt-3">
 							<div class="col-md-12"><label class="labels">Email</label>
-								<input type="text" class="form-control" placeholder="enter email" name="email">
+								<input type="text" class="form-control" placeholder="enter email" name="email"
+								pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 							</div>
 							<div class="col-md-12"><label class="labels">Password</label>
-								<input type="password" class="form-control" placeholder="enter your password" name="pass">
+								<input type="password" class="form-control" placeholder="enter your password"
+								name="pass"  required>
 							</div>
 						</div>
 
@@ -152,10 +157,12 @@
 						</div>
 						<div class="row mt-3">
 							<div class="col-md-12"><label class="labels">Email</label>
-								<input type="text" class="form-control" placeholder="enter email" name="email">
+								<input type="text" class="form-control" placeholder="enter email" name="email"
+								pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 							</div>
 							<div class="col-md-12"><label class="labels">Password</label>
-								<input type="password" class="form-control" placeholder="enter your password" name="pass">
+								<input type="password" class="form-control" placeholder="enter your password"
+								name="pass" required>
 							</div>
 						</div>
 

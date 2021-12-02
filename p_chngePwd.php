@@ -118,11 +118,13 @@ $pid = $_SESSION['pid'];
 				</tr>
 				<tr>
 					<td>New Password</td>
-					<td><input type="password" name="pwd" placeholder="Password" required></td>
+					<td><input type="password" name="pwd" placeholder="Password"
+						 pattern=".{8,}" required></td>
 				</tr>
 				<tr>
 					<td>Confirm Password</td>
-					<td><input type="password" name="cpwd" placeholder="Confirm Password" required></td>
+					<td><input type="password" name="cpwd" placeholder="Confirm Password"
+						pattern=".{8,}" required></td>
 				</tr>
 				<tr align="center">
 					<td colspan="2"><input type="submit" name="submit" value="Change Password" class="btn btn-primary"></td>

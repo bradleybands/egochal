@@ -83,33 +83,33 @@
           <form action="player_registration.php" method ="post">
           <div class="row mt-2">
             <div class="col-md-6"><label class="labels">First Name</label>
-              <input type="text" class="form-control" placeholder="first name" name="f_name" value="">
+              <input type="text" class="form-control" placeholder="first name" name="f_name"  >
             </div>
             <div class="col-md-6"><label class="labels">Surname</label>
-              <input type="text" class="form-control" value="" name="l_name" placeholder="surname">
+              <input type="text" class="form-control"   name="l_name" placeholder="surname">
             </div>
           </div>
           <div class="row mt-3">
             <div class="col-md-6"><label class="labels">Alias</label>
-              <input type="text" class="form-control" placeholder="enter alias" name="alias" value="">
+              <input type="text" class="form-control" placeholder="enter alias" name="alias"  >
             </div>
             <div class="col-md-6"><label class="labels">Team Name</label>
-              <input type="text" class="form-control" placeholder="enter team name" name="team_name" value="">
+              <input type="text" class="form-control" placeholder="enter team name" name="team_name"  >
             </div>
             <div class="col-md-12"><label class="labels">Game Title</label>
-              <input type="text" class="form-control" placeholder="enter game title" name="game" value="">
+              <input type="text" class="form-control" placeholder="enter game title" name="game"  >
             </div>
             <div class="col-md-12"><label class="labels">Mobile Number</label>
-              <input type="text" class="form-control" placeholder="+233264438599" name="mobile" value="">
+              <input type="text" class="form-control" placeholder="+233264438599" name="mobile"  >
             </div>
             <div class="col-md-12"><label class="labels">Email ID</label>
-              <input type="text" class="form-control" placeholder="example@service.com" name="email" value="">
+              <input type="text" class="form-control" placeholder="example@service.com" name="email"  >
             </div>
             <div class="col-md-12"><label class="labels">Password</label>
-              <input type="password" class="form-control" placeholder="enter your password" name="pass" value="">
+              <input type="password" class="form-control" placeholder="enter your password" name="pass"  >
             </div>
             <div class="col-md-12"><label class="labels">Confirm Password</label>
-              <input type="password" class="form-control" placeholder="re-enter your password" name="cpass" value="">
+              <input type="password" class="form-control" placeholder="re-enter your password" name="cpass"  >
             </div>
           </div>
 
@@ -152,7 +152,7 @@
               <input type="text" class="form-control" placeholder="enter email id" name="email" >
             </div>
             <div class="col-md-12"><label class="labels">Date Established</label>
-              <input type="date" class="form-control" name="est_date" value="">
+              <input type="date" class="form-control" name="est_date"  >
             </div>
             <div class="col-md-12"><label class="labels">Game Title</label>
               <input type="text" class="form-control" placeholder="enter game title" name="game" >

@@ -132,7 +132,8 @@
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="text" name="email" placeholder="email" value="<?php echo $email ?>" required></td>
+					<td><input type="text" name="email" placeholder="email" value="<?php echo $email ?>"
+						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required></td>
 				</tr>
 				<tr>
 					<td>Est Date</td>
