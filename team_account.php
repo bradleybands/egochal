@@ -57,20 +57,20 @@ session_start();
 
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="teams.php">Teams</a>
+              <a class="nav-link" href="teams.php?tname=<?php echo $tname ?>">Teams</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="games.php">Games</a>
+              <a class="nav-link" href="games.php?tname=<?php echo $tname ?>">Games</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="events.php">Events</a>
+              <a class="nav-link" href="events.php?tname=<?php echo $tname ?>">Events</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="t_account.php?tname=<?php echo $tname ?>">View Account</a>
-                <a class="dropdown-item" href="about.php">About</a>
-                <a class="dropdown-item" href="contact.php">Contact Us</a>
+                <a class="dropdown-item" href="about.php?tname=<?php echo $tname ?>">About</a>
+                <a class="dropdown-item" href="contact.php?tname=<?php echo $tname ?>">Contact Us</a>
                 <a class="dropdown-item" href="logout.php" style="color: red;">Logout</a>
               </div>
             </li>

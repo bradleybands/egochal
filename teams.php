@@ -21,6 +21,10 @@
   <link rel="stylesheet" href="css/teams_styles.css">
 
 
+	<!-- Analytics Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+	<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 
   <!-- Font Awesome -->
@@ -43,7 +47,87 @@
 
       <!-- Nav Bar -->
 
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background: black;">
+
+				<?php
+				if (isset($_SESSION['pid']))
+				{
+					$pid = $_SESSION['pid'];
+					?>
+					<a class="navbar-brand" href="player_account.php?pid=<?php echo $pid ?>">Ego Chal</a>
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="teams.php?pid=<?php echo $pid ?>">Teams</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="games.php?pid=<?php echo $pid ?>">Games</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="events.php?pid=<?php echo $pid ?>">Events</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="p_account.php?pid=<?php echo $pid ?>">View Account</a>
+									<a class="dropdown-item" href="about.php?pid=<?php echo $pid ?>">About</a>
+									<a class="dropdown-item" href="contact.php?pid=<?php echo $pid ?>">Contact Us</a>
+									<a class="dropdown-item" href="logout.php" style="color: red;">Logout</a>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+					<?php
+				}
+				elseif (isset($_SESSION['tname'])) {
+					$tname = $_SESSION['tname'];
+
+				?>
+				<a class="navbar-brand" href="team_account.php?tname=<?php echo $tname ?>">Ego Chal</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="teams.php?tname=<?php echo $tname ?>">Teams</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="games.php?tname=<?php echo $tname ?>">Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.php?tname=<?php echo $tname ?>">Events</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="t_account.php?tname=<?php echo $tname ?>">View Account</a>
+                <a class="dropdown-item" href="about.php?tname=<?php echo $tname ?>">About</a>
+                <a class="dropdown-item" href="contact.php?tname=<?php echo $tname ?>">Contact Us</a>
+                <a class="dropdown-item" href="logout.php" style="color: red;">Logout</a>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+				<?php
+
+			}
+
+				else {
+
+
+				 ?>
 
         <a class="navbar-brand" href="index.php">Ego Chal</a>
 
@@ -73,10 +157,88 @@
           </ul>
 
         </div>
+
+				<?php
+
+			}
+
+				 ?>
       </nav>
 
 
       <h2>Teams</h2>
+
+			<div class="container-fluid" style="
+			padding-right: 15px;
+			padding-left: 15px;
+			margin-right: auto;
+			margin-left: auto;
+			width: 100%;
+			">
+  <section id="minimal-statistics" >
+
+    <div class="row"
+		style="
+		dispaly:flex;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+		">
+      <div class="col-xl-3 col-sm-6 col-12" style="margin-right: auto;">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="media-body text-left">
+									<?php
+
+									  $sql = "SELECT COUNT(player_alias) AS player_count FROM player";
+									  $run = mysqli_query($conn, $sql);
+
+									  $data = mysqli_fetch_assoc($run);
+									  echo $data['player_count'];
+									 ?>
+                  <h3 style="color: #4B0082"><?php echo $data['player_count']; ?></h3>
+                  <span style="color: #4B0082;">Players</span>
+                </div>
+                <div class="align-self-center">
+                  <i class="icon-user font-large-2 float-right" style="color: #4B0082" ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="media-body text-left">
+									<?php
+
+									  $sql = "SELECT COUNT(team_name) AS team_count FROM team";
+									  $run = mysqli_query($conn, $sql);
+
+									  $data = mysqli_fetch_assoc($run);
+
+									 ?>
+                  <h3 style="color: #1AA7EC"><?php echo $data['team_count']; ?></h3>
+                  <span style="color: #1AA7EC;">Teams</span>
+                </div>
+                <div class="align-self-center">
+                  <i class="icon-users font-large-2 float-right" style="color: #1AA7EC"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</div>
+
+
+
       </section>
 
 

@@ -58,7 +58,7 @@ $pid = $_SESSION['pid'];
 
 			<nav class="navbar navbar-expand-lg navbar-dark">
 
-				<a class="navbar-brand" href="player_account.php">Ego Chal</a>
+				<a class="navbar-brand" href="player_account.php?pid=<?php echo $pid ?>">Ego Chal</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
 					<span class="navbar-toggler-icon"></span>
@@ -68,20 +68,20 @@ $pid = $_SESSION['pid'];
 
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="teams.php">Teams</a>
+							<a class="nav-link" href="teams.php?pid=<?php echo $pid ?>">Teams</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="games.php">Games</a>
+							<a class="nav-link" href="games.php?pid=<?php echo $pid ?>">Games</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="events.php">Events</a>
+							<a class="nav-link" href="events.php?pid=<?php echo $pid ?>">Events</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
 							<div class="dropdown-menu">
-								<a class="dropdown-item" href="p_account.php">View Account</a>
-								<a class="dropdown-item" href="about.php">About</a>
-								<a class="dropdown-item" href="contact.php">Contact Us</a>
+								<a class="dropdown-item" href="p_account.php?pid=<?php echo $pid ?>">View Account</a>
+								<a class="dropdown-item" href="about.php?pid=<?php echo $pid ?>">About</a>
+								<a class="dropdown-item" href="contact.php?pid=<?php echo $pid ?>">Contact Us</a>
 								<a class="dropdown-item" href="logout.php" style="color: red;">Logout</a>
 							</div>
 						</li>
@@ -90,8 +90,9 @@ $pid = $_SESSION['pid'];
 
 				</div>
 
-
 		</div>
+
+		</nav>
 
 		<h1 class="text-center text-light">ACCOUNT INFORMATION</h1>
 		<a href="p_account.php"><button type="button" class="btn btn-danger ml-3" style="float:left;">BACK</button></a>
@@ -101,7 +102,7 @@ $pid = $_SESSION['pid'];
 
 
 
-		</nav>
+
 
 
 	</section>
@@ -118,13 +119,11 @@ $pid = $_SESSION['pid'];
 				</tr>
 				<tr>
 					<td>New Password</td>
-					<td><input type="password" name="pwd" placeholder="Password"
-						 pattern=".{8,}" required></td>
+					<td><input type="password" name="pwd" placeholder="Password" pattern=".{8,}" required></td>
 				</tr>
 				<tr>
 					<td>Confirm Password</td>
-					<td><input type="password" name="cpwd" placeholder="Confirm Password"
-						pattern=".{8,}" required></td>
+					<td><input type="password" name="cpwd" placeholder="Confirm Password" pattern=".{8,}" required></td>
 				</tr>
 				<tr align="center">
 					<td colspan="2"><input type="submit" name="submit" value="Change Password" class="btn btn-primary"></td>

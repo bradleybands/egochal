@@ -73,7 +73,7 @@
 
 			<nav class="navbar navbar-expand-lg navbar-dark">
 
-				<a class="navbar-brand" href="player_account.php">Ego Chal</a>
+				<a class="navbar-brand" href="player_account.php?pid=<?php echo $pid ?>">Ego Chal</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
 					<span class="navbar-toggler-icon"></span>
@@ -83,20 +83,20 @@
 
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="teams.php">Teams</a>
+							<a class="nav-link" href="teams.php?pid=<?php echo $pid ?>">Teams</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="games.php">Games</a>
+							<a class="nav-link" href="games.php?pid=<?php echo $pid ?>">Games</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="events.php">Events</a>
+							<a class="nav-link" href="events.php?pid=<?php echo $pid ?>">Events</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
 							<div class="dropdown-menu">
-								<a class="dropdown-item" href="p_account.php">View Account</a>
-								<a class="dropdown-item" href="about.php">About</a>
-								<a class="dropdown-item" href="contact.php">Contact Us</a>
+								<a class="dropdown-item" href="p_account.php?pid=<?php echo $pid ?>">View Account</a>
+								<a class="dropdown-item" href="about.php?pid=<?php echo $pid ?>">About</a>
+								<a class="dropdown-item" href="contact.php?pid=<?php echo $pid ?>">Contact Us</a>
 								<a class="dropdown-item" href="logout.php" style="color: red;">Logout</a>
 							</div>
 						</li>

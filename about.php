@@ -35,7 +35,87 @@
 
       <!-- Nav Bar -->
 
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background: black;">
+
+        <?php
+        if (isset($_SESSION['pid']))
+        {
+          $pid = $_SESSION['pid'];
+          ?>
+          <a class="navbar-brand" href="player_account.php?pid=<?php echo $pid ?>">Ego Chal</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="teams.php?pid=<?php echo $pid ?>">Teams</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="games.php?pid=<?php echo $pid ?>">Games</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.php?pid=<?php echo $pid ?>">Events</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="p_account.php?pid=<?php echo $pid ?>">View Account</a>
+                  <a class="dropdown-item" href="about.php?pid=<?php echo $pid ?>">About</a>
+                  <a class="dropdown-item" href="contact.php?pid=<?php echo $pid ?>">Contact Us</a>
+                  <a class="dropdown-item" href="logout.php" style="color: red;">Logout</a>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+          <?php
+        }
+        elseif (isset($_SESSION['tname'])) {
+          $tname = $_SESSION['tname'];
+
+        ?>
+        <a class="navbar-brand" href="team_account.php?tname=<?php echo $tname ?>">Ego Chal</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="teams.php?tname=<?php echo $tname ?>">Teams</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="games.php?tname=<?php echo $tname ?>">Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.php?tname=<?php echo $tname ?>">Events</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="t_account.php?tname=<?php echo $tname ?>">View Account</a>
+                <a class="dropdown-item" href="about.php?tname=<?php echo $tname ?>">About</a>
+                <a class="dropdown-item" href="contact.php?tname=<?php echo $tname ?>">Contact Us</a>
+                <a class="dropdown-item" href="logout.php" style="color: red;">Logout</a>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+        <?php
+
+      }
+
+        else {
+
+
+         ?>
 
         <a class="navbar-brand" href="index.php">Ego Chal</a>
 
@@ -65,8 +145,13 @@
           </ul>
 
         </div>
-      </nav>
 
+        <?php
+
+      }
+
+         ?>
+      </nav>
 
       <h2>About Us</h2>
 
