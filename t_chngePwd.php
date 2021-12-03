@@ -131,6 +131,19 @@ $tname = $_SESSION['tname'];
 		</table>
 	</div>
 
+	<!-- Footer -->
+
+	<footer class="colored-section" id="footer" style="margin-top:50px;">
+		<div class="container-fluid">
+			<i class="social-icon fab fa-facebook-f"></i>
+			<i class="social-icon fab fa-twitter"></i>
+			<i class="social-icon fab fa-instagram"></i>
+			<i class="social-icon fas fa-envelope"></i>
+			<p>© Copyright 2021 BYTE Tech</p>
+		</div>
+	</footer>
+
+
 
 	<script src="bootstrap/jss/jquery.min.js"></script>
 	<script src="bootstrap/jss/popper.min.js"></script>
